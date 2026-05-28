@@ -1,7 +1,13 @@
-# BaseSaaS — O Boilerplate Definitivo para o seu Próximo SaaS de Sucesso!
+<p align="center">
+  <img src="public/brand-preview.jpg" alt="BaseSaaS Brand Preview" width="100%" style="border-radius: 1rem; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.7);" />
+</p>
+
+<h1 align="center">🚀 BaseSaaS</h1>
 
 <p align="center">
-  <img src="public/brand-preview.jpg" alt="BaseSaaS Brand Preview" width="100%" style="border-radius: 1rem; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 15px 35px -5px rgba(0, 0, 0, 0.6);" />
+  <b>O Boilerplate Definitivo, Altamente Escalável e Pronto para Produção para o seu Próximo SaaS!</b>
+  <br />
+  <sub>Meticulosamente projetado com Angular 21+, Supabase, Vitest e Transloco para colocar sua ideia no mercado em tempo recorde.</sub>
 </p>
 
 <p align="center">
