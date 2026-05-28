@@ -62,6 +62,12 @@
       "BACK_TO_LOGIN": "Ir a Iniciar Sesión"
     }
   },
+  "TOPBAR": {
+    "CHOOSE_LANGUAGE": "Idioma",
+    "PORTUGUESE": "Portugués",
+    "ENGLISH": "Inglés",
+    "SPANISH": "Español"
+  },
   "DASHBOARD": {
     "TITLE": "Panel Principal",
     "LOGOUT": "Cerrar Sesión",
