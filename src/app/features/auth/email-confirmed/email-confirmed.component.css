@@ -1,0 +1,50 @@
+.auth-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, #111 0%, #000 100%);
+  color: #fff;
+  padding: 1.5rem;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.25rem;
+  padding: 2.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+.success-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+}
+.auth-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: #3ecf8e;
+}
+.auth-subtitle {
+  font-size: 0.9rem;
+  color: #a3a3a3;
+  margin: 0;
+  line-height: 1.5;
+}
+.auth-btn {
+  display: block;
+  background: #3ecf8e;
+  color: #000;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  margin-top: 1.5rem;
+}

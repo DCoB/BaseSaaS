@@ -1,0 +1,80 @@
+{
+  "TOAST": {
+    "ERROR": "Error"
+  },
+  "SUPABASE_ERRORS": {
+    "INVALID_LOGIN_CREDENTIALS": "Invalid email or password.",
+    "EMAIL_NOT_CONFIRMED": "Please confirm your email before logging in.",
+    "NOT_FOUND": "Resource not found.",
+    "UNAUTHORIZED": "Session expired. Please log in again.",
+    "FORBIDDEN": "Access denied.",
+    "SERVER_ERROR": "Internal database server error.",
+    "DEFAULT_ERROR": "An unexpected error occurred."
+  },
+  "AUTH": {
+    "LOADING": "Loading...",
+    "OR": "or",
+    "EMAIL_LABEL": "Email Address",
+    "PASSWORD_LABEL": "Password",
+    "FORGOT_PASSWORD_LINK": "Forgot password?",
+    "LOGIN": {
+      "TITLE": "Sign In to Your Account",
+      "SUBTITLE": "Access the complete base of your SaaS",
+      "SUBMIT": "Sign In",
+      "GOOGLE": "Sign In with Google",
+      "DONT_HAVE_ACCOUNT": "Don't have an account?",
+      "SIGNUP_LINK": "Sign Up"
+    },
+    "REGISTER": {
+      "TITLE": "Create New Account",
+      "SUBTITLE": "Start building your SaaS today",
+      "NAME_LABEL": "Full Name",
+      "SUBMIT": "Create Account",
+      "ALREADY_HAVE_ACCOUNT": "Already have an account?",
+      "LOGIN_LINK": "Sign In"
+    },
+    "FORGOT_PASSWORD": {
+      "TITLE": "Recover Password",
+      "SUBTITLE": "We will send a reset link to your email",
+      "SUBMIT": "Send Link",
+      "SUCCESS_MESSAGE": "Link sent successfully! Check your inbox.",
+      "BACK_TO_LOGIN": "Back to Sign In"
+    },
+    "RESET_PASSWORD": {
+      "TITLE": "Set New Password",
+      "SUBTITLE": "Choose a strong access password",
+      "NEW_PASSWORD_LABEL": "New Password",
+      "SUBMIT": "Save New Password"
+    },
+    "EMAIL_PENDING": {
+      "TITLE": "Confirmation Pending",
+      "SUBTITLE": "We sent an activation link to your email. Please confirm it to access the panel.",
+      "BACK_TO_LOGIN": "Back to Sign In"
+    },
+    "EMAIL_CONFIRMED": {
+      "TITLE": "Email Confirmed!",
+      "SUBTITLE": "Your account has been successfully activated. You can now access all features.",
+      "GO_TO_DASHBOARD": "Go to Dashboard"
+    },
+    "UNAUTHORIZED": {
+      "TITLE": "Unauthorized Access",
+      "SUBTITLE": "You must be logged in to view this page or your access has expired.",
+      "BACK_TO_LOGIN": "Go to Sign In"
+    }
+  },
+  "DASHBOARD": {
+    "TITLE": "Main Dashboard",
+    "LOGOUT": "Sign Out",
+    "GUEST": "Guest",
+    "PLAN_FREE": "Free Plan",
+    "PLAN_PREMIUM": "Premium Plan"
+  },
+  "GLOBAL": {
+    "LOADING": "Loading Workspace...",
+    "CONFIG_ERROR": {
+      "TITLE": "Pending Configuration!",
+      "DESCRIPTION": "We detected that your <strong>Supabase</strong> credentials have not been configured. For full operation of your SaaS authentication, define them in the <code>src/environments/environment.ts</code> file.",
+      "INSTRUCTIONS": "# In the src/environments/environment.ts file, configure:"
+    }
+  }
+}

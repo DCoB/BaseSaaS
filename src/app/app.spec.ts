@@ -1,10 +1,22 @@
 import { TestBed } from '@angular/core/testing';
 import { App } from './app';
+import { MessageService } from 'primeng/api';
+import { TranslocoTestingModule } from '@jsverse/transloco';
 
 describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [App],
+      imports: [
+        App,
+        TranslocoTestingModule.forRoot({
+          langs: { pt: {} },
+          translocoConfig: {
+            defaultLang: 'pt',
+            availableLangs: ['pt'],
+          },
+        }),
+      ],
+      providers: [MessageService],
     }).compileComponents();
   });
 
@@ -12,12 +24,5 @@ describe('App', () => {
     const fixture = TestBed.createComponent(App);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
-  });
-
-  it('should render title', async () => {
-    const fixture = TestBed.createComponent(App);
-    await fixture.whenStable();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, BaseSaas');
   });
 });

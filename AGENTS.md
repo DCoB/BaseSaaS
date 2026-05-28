@@ -28,7 +28,12 @@ You are an expert in TypeScript, Angular, and scalable web application developme
 - Use `input()` and `output()` functions instead of decorators
 - Use `computed()` for derived state
 - Set `changeDetection: ChangeDetectionStrategy.OnPush` in `@Component` decorator
-- Prefer inline templates for small components
+- Separate Logic, Template, and Style (4-File Rule): Every complex Angular component (or those containing form logic, validation, transitions, or rich styles) **MUST** be built by splitting it into its 4 corresponding files:
+  1. `.ts` (Component logic and control, referencing relative `templateUrl` and `styleUrl`)
+  2. `.html` (Clean and independent HTML template)
+  3. `.css` (UI-specific styles)
+  4. `.spec.ts` (Automated unit tests)
+- **Single-File Exception**: Only extremely simple components, of a purely illustrative nature or static alerts, that possess **very few lines of logic and template**, are allowed to be in a single file with inline template/styles.
 - Prefer Reactive forms instead of Template-driven ones
 - Do NOT use `ngClass`, use `class` bindings instead
 - Do NOT use `ngStyle`, use `style` bindings instead
@@ -53,3 +58,10 @@ You are an expert in TypeScript, Angular, and scalable web application developme
 - Design services around a single responsibility
 - Use the `providedIn: 'root'` option for singleton services
 - Use the `inject()` function instead of constructor injection
+
+## Execution & Verification Guidelines
+
+- **Smart Testing & Verification**: To save time and system resources, do NOT run the entire unit test suite (`npm run test`) or trigger full production builds (`npm run build`) on every minor modification or every turn.
+  - Only execute the full test suite and build when finalizing the implementation of a feature, before delivering the final task summary, or when explicitly requested by the user.
+  - For minor changes, prioritize visual verification or reasoning, or run targeted tests instead of the entire suite.
+

@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+/* Reset global de margens, preenchimentos e bordas padrão do navegador */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* Evita relances brancos durante transições */
+}
