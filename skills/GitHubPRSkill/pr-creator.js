@@ -250,10 +250,12 @@ const prTitle = runGit('git log -1 --pretty=%s') || `feat: atualizações na bra
 console.log('--- SUMÁRIO DO PULL REQUEST ---');
 console.log(bodyText);
 
-if (!GITHUB_TOKEN) {
-  console.log('⚠️  GITHUB_TOKEN não encontrado no arquivo .env ou no environment.ts.');
-  console.log('Para criação direta via linha de comando, adicione no seu arquivo .env:');
-  console.log('GITHUB_TOKEN=seu_personal_access_token_aqui\n');
+const isPlaceholderToken = GITHUB_TOKEN && (GITHUB_TOKEN.includes('placeholder') || GITHUB_TOKEN === '');
+
+if (!GITHUB_TOKEN || isPlaceholderToken) {
+  console.error('\n❌ Erro: GITHUB_TOKEN não configurado ou é um placeholder no arquivo .env.');
+  console.error('Para criação direta via linha de comando, adicione no seu arquivo .env:');
+  console.error('GITHUB_TOKEN=seu_personal_access_token_aqui\n');
   
   const baseUrl = 'https://github.com/DCoB/base-saas/compare/main...';
   const queryParams = `?expand=1&title=${encodeURIComponent(prTitle)}&body=${encodeURIComponent(bodyText)}`;
@@ -262,7 +264,7 @@ if (!GITHUB_TOKEN) {
   console.log('--- LINK DE FALLBACK (NAVEGADOR) ---');
   console.log(fullPrUrl);
   console.log('\n--------------------------------------------');
-  process.exit(0);
+  process.exit(1);
 }
 
 async function createPullRequest() {
@@ -274,6 +276,10 @@ async function createPullRequest() {
     head: currentBranch,
     base: 'main'
   };
+
+  const baseUrl = 'https://github.com/DCoB/base-saas/compare/main...';
+  const queryParams = `?expand=1&title=${encodeURIComponent(prTitle)}&body=${encodeURIComponent(bodyText)}`;
+  const fullPrUrl = `${baseUrl}${currentBranch}${queryParams}`;
 
   try {
     const response = await fetch('https://api.github.com/repos/DCoB/base-saas/pulls', {
@@ -306,9 +312,18 @@ async function createPullRequest() {
       console.error('\n❌ Falha ao criar Pull Request no GitHub:');
       console.error(`Status: ${response.status} - ${response.statusText}`);
       console.error('Mensagem:', result.message || result);
+      
+      console.log('\n--- LINK DE FALLBACK GERADO (NAVEGADOR) ---');
+      console.log(fullPrUrl);
+      console.log('\n--------------------------------------------');
+      process.exit(1);
     }
   } catch (error) {
     console.error('\n❌ Erro de rede ou comunicação ao criar PR:', error.message);
+    console.log('\n--- LINK DE FALLBACK GERADO (NAVEGADOR) ---');
+    console.log(fullPrUrl);
+    console.log('\n--------------------------------------------');
+    process.exit(1);
   }
 }
 

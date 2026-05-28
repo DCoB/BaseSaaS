@@ -27,6 +27,8 @@ Para facilitar a leitura e consumo, dividimos a nossa documentação em dois pro
 
 - 🔑 **[Setup Completo do Supabase](file:///d:/Projetos/BaseSaas/docs/tutorials/supabase-setup.md)**:
   Guia passo a passo desde a criação da conta gratuita e credenciais no Supabase, passando pela criação da tabela `profiles` com triggers SQL automáticos de cadastro, até a vinculação final com o código da aplicação.
+- 🤖 **[Automação & Skills de Agente](file:///d:/Projetos/BaseSaas/docs/tutorials/agent-skills.md)**:
+  Manual do framework local de IA, detalhando a configuração, propósitos e funcionamento da nossa Skill inteligente de Pull Request (`GitHubPRSkill`).
 
 ---
 
