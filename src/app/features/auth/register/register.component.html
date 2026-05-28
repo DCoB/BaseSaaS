@@ -1,0 +1,56 @@
+<div class="auth-container">
+  <div class="auth-card">
+    <div class="auth-header">
+      <img src="/logo.jpg" alt="BaseSaas Logo" class="auth-logo" />
+      <h2 class="auth-title">{{ 'AUTH.REGISTER.TITLE' | transloco }}</h2>
+      <p class="auth-subtitle">{{ 'AUTH.REGISTER.SUBTITLE' | transloco }}</p>
+    </div>
+
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="auth-form">
+      <div class="form-group">
+        <label for="name">{{ 'AUTH.REGISTER.NAME_LABEL' | transloco }}</label>
+        <input 
+          id="name" 
+          type="text" 
+          formControlName="name" 
+          placeholder="Seu Nome Completo"
+          class="form-input"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email">{{ 'AUTH.EMAIL_LABEL' | transloco }}</label>
+        <input 
+          id="email" 
+          type="email" 
+          formControlName="email" 
+          placeholder="seu-email@exemplo.com"
+          class="form-input"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="password">{{ 'AUTH.PASSWORD_LABEL' | transloco }}</label>
+        <input 
+          id="password" 
+          type="password" 
+          formControlName="password" 
+          placeholder="••••••••"
+          class="form-input"
+        />
+      </div>
+
+      <button type="submit" [disabled]="isLoading() || registerForm.invalid" class="auth-btn">
+        @if (isLoading()) {
+          <span>{{ 'AUTH.LOADING' | transloco }}</span>
+        } @else {
+          <span>{{ 'AUTH.REGISTER.SUBMIT' | transloco }}</span>
+        }
+      </button>
+    </form>
+
+    <div class="auth-footer">
+      <p>{{ 'AUTH.REGISTER.ALREADY_HAVE_ACCOUNT' | transloco }} <a routerLink="/login" class="auth-link">{{ 'AUTH.REGISTER.LOGIN_LINK' | transloco }}</a></p>
+    </div>
+  </div>
+</div>

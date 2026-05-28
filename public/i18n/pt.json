@@ -1,0 +1,80 @@
+{
+  "TOAST": {
+    "ERROR": "Erro"
+  },
+  "SUPABASE_ERRORS": {
+    "INVALID_LOGIN_CREDENTIALS": "E-mail ou senha inválidos.",
+    "EMAIL_NOT_CONFIRMED": "Por favor, confirme seu e-mail antes de fazer login.",
+    "NOT_FOUND": "Recurso não encontrado.",
+    "UNAUTHORIZED": "Sessão expirada. Por favor, faça login novamente.",
+    "FORBIDDEN": "Acesso negado.",
+    "SERVER_ERROR": "Erro interno no servidor do banco de dados.",
+    "DEFAULT_ERROR": "Ocorreu um erro inesperado."
+  },
+  "AUTH": {
+    "LOADING": "Carregando...",
+    "OR": "ou",
+    "EMAIL_LABEL": "Endereço de E-mail",
+    "PASSWORD_LABEL": "Senha",
+    "FORGOT_PASSWORD_LINK": "Esqueceu a senha?",
+    "LOGIN": {
+      "TITLE": "Entrar na sua Conta",
+      "SUBTITLE": "Acesse a base completa do seu SaaS",
+      "SUBMIT": "Acessar Plataforma",
+      "GOOGLE": "Entrar com o Google",
+      "DONT_HAVE_ACCOUNT": "Não tem uma conta?",
+      "SIGNUP_LINK": "Cadastre-se"
+    },
+    "REGISTER": {
+      "TITLE": "Criar Nova Conta",
+      "SUBTITLE": "Comece a construir seu SaaS hoje mesmo",
+      "NAME_LABEL": "Nome Completo",
+      "SUBMIT": "Criar Conta",
+      "ALREADY_HAVE_ACCOUNT": "Já possui uma conta?",
+      "LOGIN_LINK": "Fazer Login"
+    },
+    "FORGOT_PASSWORD": {
+      "TITLE": "Recuperar Senha",
+      "SUBTITLE": "Enviaremos um link de redefinição para o seu e-mail",
+      "SUBMIT": "Enviar Link",
+      "SUCCESS_MESSAGE": "Link enviado com sucesso! Verifique sua caixa de entrada.",
+      "BACK_TO_LOGIN": "Voltar para o Login"
+    },
+    "RESET_PASSWORD": {
+      "TITLE": "Definir Nova Senha",
+      "SUBTITLE": "Escolha uma senha forte de acesso",
+      "NEW_PASSWORD_LABEL": "Nova Senha",
+      "SUBMIT": "Salvar Nova Senha"
+    },
+    "EMAIL_PENDING": {
+      "TITLE": "Confirmação Pendente",
+      "SUBTITLE": "Enviamos um link de ativação para o seu e-mail. Por favor, confirme-o para acessar o painel.",
+      "BACK_TO_LOGIN": "Voltar para o Login"
+    },
+    "EMAIL_CONFIRMED": {
+      "TITLE": "E-mail Confirmado!",
+      "SUBTITLE": "Sua conta foi ativada com sucesso. Você já pode acessar todos os recursos.",
+      "GO_TO_DASHBOARD": "Ir para o Dashboard"
+    },
+    "UNAUTHORIZED": {
+      "TITLE": "Acesso Não Autorizado",
+      "SUBTITLE": "Você precisa estar logado para visualizar esta página ou seu acesso expirou.",
+      "BACK_TO_LOGIN": "Ir para o Login"
+    }
+  },
+  "DASHBOARD": {
+    "TITLE": "Painel Principal",
+    "LOGOUT": "Sair",
+    "GUEST": "Visitante",
+    "PLAN_FREE": "Plano Grátis",
+    "PLAN_PREMIUM": "Plano Premium"
+  },
+  "GLOBAL": {
+    "LOADING": "Carregando Estação de Trabalho...",
+    "CONFIG_ERROR": {
+      "TITLE": "Configuração Pendente!",
+      "DESCRIPTION": "Detectamos que suas credenciais do <strong>Supabase</strong> não foram configuradas. Para o funcionamento completo da autenticação do seu SaaS, defina-as no arquivo <code>src/environments/environment.ts</code>.",
+      "INSTRUCTIONS": "# No arquivo src/environments/environment.ts, configure:"
+    }
+  }
+}
