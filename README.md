@@ -8,6 +8,34 @@
   <sub>Meticulosamente projetado com Angular 21+, Supabase, Vitest e Transloco para colocar sua ideia no mercado em tempo recorde.</sub>
 </p>
 
+<div align="center">
+  <table style="border: 1px solid #30363d; border-radius: 12px; background-color: #0d1117; margin: 24px 0; max-width: 500px; border-collapse: separate;">
+    <tr>
+      <td align="center" style="padding: 24px; border: none;">
+        <h4 style="margin: 0 0 8px 0; color: #58a6ff; font-family: system-ui, -apple-system, sans-serif; font-size: 15px; letter-spacing: 0.5px;">🌍 DOCUMENTATION LANGUAGE / IDIOMA</h4>
+        <p style="margin: 0 0 16px 0; font-size: 12.5px; color: #8b949e; font-family: system-ui, -apple-system, sans-serif; line-height: 1.4;">
+          Escolha seu idioma abaixo para alternar o contexto de leitura:<br/>
+          <i>Choose your language below to swap the context instantly:</i>
+        </p>
+        <table align="center" style="border: none; border-collapse: collapse;">
+          <tr>
+            <td style="padding: 0 8px; border: none;">
+              <a href="README.md">
+                <img src="https://img.shields.io/badge/Leia%20em-Portugu%C3%AAs-2ea44f?style=for-the-badge&logo=portugal&logoColor=white" alt="Português" />
+              </a>
+            </td>
+            <td style="padding: 0 8px; border: none;">
+              <a href="README.en.md">
+                <img src="https://img.shields.io/badge/Read%20in-English-0366d6?style=for-the-badge&logo=github&logoColor=white" alt="English" />
+              </a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</div>
+
 <p align="center">
   <img src="https://img.shields.io/badge/Angular-21.2.0-DD0031?style=for-the-badge&logo=angular&logoColor=white" alt="Angular 21" />
   <img src="https://img.shields.io/badge/Supabase-Auth%20%26%20Database-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" />
