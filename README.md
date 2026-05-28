@@ -2,8 +2,6 @@
   <img src="public/brand-preview.jpg" alt="BaseSaaS Brand Preview" width="100%" style="border-radius: 1rem; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.7);" />
 </p>
 
-<h1 align="center">🚀 BaseSaaS</h1>
-
 <p align="center">
   <b>O Boilerplate Definitivo, Altamente Escalável e Pronto para Produção para o seu Próximo SaaS!</b>
   <br />
