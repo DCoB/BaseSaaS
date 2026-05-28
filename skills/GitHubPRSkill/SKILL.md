@@ -29,14 +29,24 @@ Para evitar o processamento excessivo de arquivos longos de diff (o que desperdi
 4.  **Auditoria de Atualização de Documentação**:
     - Caso haja modificações em infraestrutura (Supabase, pacotes, variáveis de ambiente ou scripts), o script avaliará se houveram modificações correspondentes em arquivos de documentação markdown (`.md` ou `README.md`).
 
-5.  **Executar a Automação Local**:
-    Use a ferramenta `run_command` para executar a ferramenta local da Skill:
+5.  **Gerar o Resumo do Objetivo do PR (Responsabilidade da IA)**:
+    Antes de executar o script, a IA **deve obrigatoriamente**:
+    - Executar `git diff main...HEAD --stat` para obter a visão geral dos arquivos alterados.
+    - Analisar o contexto das modificações (componentes criados/alterados, serviços, estilos, traduções, docs, etc.).
+    - Redigir um texto curto e direto (1–2 frases) que resuma o **objetivo principal** deste PR. O texto deve ser claro para um revisor humano que nunca viu as mudanças.
+    - Passar esse texto como argumento `--objective` ao executar o script.
+
+    > **Exemplo**: Se a branch adicionou um sistema de temas claro/escuro com `ThemeService`, refatorou CSS de 10 componentes e atualizou traduções, o texto seria algo como:
+    > `"Implementação do sistema de seleção de temas (claro/escuro) com ThemeService reativo, refatoração de estilos para variáveis CSS e suporte completo a i18n."`
+
+6.  **Executar a Automação Local**:
+    Use a ferramenta `run_command` para executar a ferramenta local da Skill, passando o resumo gerado no passo 5:
     ```bash
-    node skills/GitHubPRSkill/pr-creator.js
+    node skills/GitHubPRSkill/pr-creator.js --objective "Texto resumo do objetivo do PR aqui"
     ```
     Isso executará toda a suíte de validações e, caso o token do GitHub esteja configurado e todas as validações passem, criará o Pull Request instantaneamente na API do GitHub do repositório `DCoB/base-saas`.
 
-6.  **Apresentar o Resultado ao Usuário**:
+7.  **Apresentar o Resultado ao Usuário**:
     - Se o PR foi criado diretamente, apresente o título, link do PR gerado e as auditorias agregadas de cobertura de testes e documentações.
     - Se o token do GitHub não foi encontrado, apresente a análise de auditoria gerada localmente e exiba o link amigável pré-preenchido de fallback para que o usuário possa clicar e criar o PR no navegador com um clique.
 
@@ -45,4 +55,5 @@ Para evitar o processamento excessivo de arquivos longos de diff (o que desperdi
 ## 🛠️ Script Utilitário Automatizado (IA Engine)
 
 - Caminho: `skills/GitHubPRSkill/pr-creator.js`
-- Execução: `node skills/GitHubPRSkill/pr-creator.js`
+- Execução: `node skills/GitHubPRSkill/pr-creator.js --objective "Texto do objetivo"`
+

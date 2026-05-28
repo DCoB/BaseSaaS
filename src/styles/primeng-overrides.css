@@ -1,0 +1,75 @@
+/* ==========================================================================
+   PrimeNG Global Overrides & Themes Customizations
+   ========================================================================== */
+
+/* 1. Desativação Absoluta de Transições de Cores em Componentes PrimeNG */
+.p-component,
+.p-component *,
+.p-select,
+.p-select *,
+.p-select-option,
+.p-select-option *,
+.p-select-label,
+.p-select-dropdown {
+  transition: none !important;
+  transition-delay: 0s !important;
+  transition-duration: 0s !important;
+  transition-property: none !important;
+  animation-duration: 0s !important;
+}
+
+/* 2. Customização Premium do PrimeNG Select para o Seletor de Idiomas */
+.lang-select.p-select {
+  background: var(--color-card) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 8px !important;
+  min-height: 44px !important;
+  width: 90px !important;
+  max-width: 90px !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 0.5rem !important;
+}
+
+.lang-select.p-select:hover {
+  background: var(--color-border-strong) !important;
+  border-color: var(--color-primary) !important;
+  box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.15) !important;
+}
+
+.lang-select.p-select .p-select-label {
+  padding: 0 0.25rem !important;
+  color: var(--color-text-primary) !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+}
+
+.lang-select.p-select .p-select-dropdown {
+  color: var(--color-text-secondary) !important;
+}
+
+/* 3. Painel Suspenso / Overlay do Select */
+.p-select-overlay {
+  background: var(--color-overlay-bg) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15) !important;
+  margin-top: 4px !important;
+  position: absolute !important;
+  right: 0 !important;
+  left: auto !important;
+  min-width: 150px !important;
+}
+
+.p-select-option {
+  padding: 0.75rem 1rem !important;
+  color: var(--color-text-secondary) !important;
+  font-size: 0.9rem !important;
+}
+
+.p-select-option:hover,
+.p-select-option.p-highlight {
+  background: var(--color-overlay-hover) !important;
+  color: var(--color-primary) !important;
+}

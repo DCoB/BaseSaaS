@@ -41,6 +41,8 @@
   <img src="https://img.shields.io/badge/Supabase-Auth%20%26%20Database-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" />
   <img src="https://img.shields.io/badge/Vitest-Test%20Runner-6E9F18?style=for-the-badge&logo=vitest&logoColor=white" alt="Vitest" />
   <img src="https://img.shields.io/badge/i18n-Transloco-blueviolet?style=for-the-badge&logo=internet-explorer&logoColor=white" alt="i18n Transloco" />
+  <img src="https://img.shields.io/badge/Tema-Claro%20%2F%20Escuro-ff69b4?style=for-the-badge" alt="Tema Claro/Escuro" />
+  <img src="https://img.shields.io/badge/GitHub-Template%20Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Template" />
   <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="Licença MIT" />
 </p>
 
@@ -60,6 +62,7 @@ O **BaseSaas** é a solução definitiva de nível comercial. Ele foi meticulosa
 | :------------------------------- | :------------------------------------------------------------------------------------------------ | :------------------------- |
 | **🔐 Autenticação Suprema**      | Fluxo de segurança completo (Sign Up, Sign In, Redefinição de Senha, Guards e proteção de rotas). | Supabase Auth              |
 | **🌍 Praticidade Global (i18n)** | Tradução dinâmica completa no idioma ativo do usuário. Nada de strings chumbadas!                 | @jsverse/transloco         |
+| **🌓 Tema Claro/Escuro**         | Alternador de tema reativo gerenciado por Signals & Effects. Transição instantânea, sem flickering e persistido no localStorage. | Variáveis CSS + Signals    |
 | **🛡️ Interceptação Inteligente** | Erros de rede do Supabase são traduzidos em tempo de execução e exibidos de forma premium na UI.  | Interceptor + Transloco    |
 | **⚡ Performance Extrema**       | Carregamento de páginas dinâmico, navegação instantânea e SSR nativo.                             | Lazy Loading & Angular SSR |
 | **🧪 Testes Blindados**          | Infraestrutura ultra-veloz de testes unitários que rodam em milissegundos.                        | Vitest                     |
@@ -91,7 +94,9 @@ _Precisa de ajuda para conectar as ferramentas e colocar o app para rodar? Acess
 
 ## ⚡ Guia de Início Rápido (3 Passos)
 
-### 1. Clonar e Instalar
+### 1. Criar a partir do Template e Instalar
+
+Você pode iniciar seu projeto rapidamente clicando no botão verde **[Use this template](https://github.com/DCoB/BaseSaaS/generate)** no topo deste repositório para criar uma cópia limpa em sua própria conta do GitHub. Ou, clone manualmente:
 
 ```bash
 git clone https://github.com/seu-usuario/base-saas.git

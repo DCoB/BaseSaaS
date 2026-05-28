@@ -184,7 +184,17 @@ files.forEach(f => {
   }
 });
 
-let bodyText = `## 🚀 Resumo das Modificações\n\n`;
+// Capturar o texto de objetivo do PR passado pela IA via argumento --objective
+const objectiveArgIndex = process.argv.indexOf('--objective');
+const objectiveText = objectiveArgIndex !== -1 && process.argv[objectiveArgIndex + 1]
+  ? process.argv[objectiveArgIndex + 1]
+  : null;
+
+const objectiveBlock = objectiveText
+  ? `> **Objetivo**: ${objectiveText}\n\n`
+  : '';
+
+let bodyText = `${objectiveBlock}## 🚀 Resumo das Modificações\n\n`;
 
 if (categories.Componentes.length > 0) {
   bodyText += `### 💻 Componentes e Lógica:\n`;

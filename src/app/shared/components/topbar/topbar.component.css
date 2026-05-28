@@ -5,10 +5,10 @@
   justify-content: space-between;
   height: 70px;
   padding: 0 1.5rem;
-  background: rgba(10, 10, 10, 0.75);
+  background: var(--color-background);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid var(--color-border);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -33,7 +33,7 @@
   font-size: 1.15rem;
   font-weight: 700;
   letter-spacing: -0.01em;
-  background: linear-gradient(135deg, #ffffff 0%, #a3a3a3 100%);
+  background: linear-gradient(135deg, var(--color-text-primary) 0%, var(--color-text-secondary) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -52,64 +52,6 @@
   align-items: center;
 }
 
-/* Custom styling for PrimeNG Select element to fit the dark theme */
-:host ::ng-deep .lang-select.p-select {
-  background: rgba(255, 255, 255, 0.03) !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  border-radius: 8px !important;
-  min-height: 44px !important;
-  width: 90px !important;
-  max-width: 90px !important;
-  position: relative !important;
-  display: flex !important;
-  align-items: center !important;
-  padding: 0 0.5rem !important;
-  transition: all 0.2s ease !important;
-}
-
-:host ::ng-deep .lang-select.p-select:hover {
-  background: rgba(255, 255, 255, 0.06) !important;
-  border-color: rgba(62, 207, 142, 0.4) !important;
-  box-shadow: 0 0 0 3px rgba(62, 207, 142, 0.15) !important;
-}
-
-:host ::ng-deep .lang-select.p-select .p-select-label {
-  padding: 0 0.25rem !important;
-  color: #fff !important;
-  font-size: 0.9rem !important;
-  font-weight: 500 !important;
-}
-
-:host ::ng-deep .lang-select.p-select .p-select-dropdown {
-  color: #a3a3a3 !important;
-}
-
-/* Dropdown Overlay / panel customizing */
-:host ::ng-deep .p-select-overlay {
-  background: #0f0f0f !important;
-  border: 1px solid rgba(255, 255, 255, 0.08) !important;
-  border-radius: 8px !important;
-  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.8) !important;
-  margin-top: 4px !important;
-  position: absolute !important;
-  right: 0 !important;
-  left: auto !important;
-  min-width: 150px !important;
-}
-
-:host ::ng-deep .p-select-option {
-  padding: 0.75rem 1rem !important;
-  color: #d4d4d4 !important;
-  transition: all 0.15s ease !important;
-  font-size: 0.9rem !important;
-}
-
-:host ::ng-deep .p-select-option:hover,
-:host ::ng-deep .p-select-option.p-highlight {
-  background: rgba(62, 207, 142, 0.1) !important;
-  color: #3ecf8e !important;
-}
-
 .lang-option-selected {
   display: flex;
   align-items: center;
@@ -118,7 +60,7 @@
 
 .lang-globe-icon {
   font-size: 1rem;
-  color: #3ecf8e; /* Destaque verde esmeralda premium */
+  color: var(--color-primary);
 }
 
 .lang-option-item {
@@ -134,7 +76,33 @@
 .lang-name-short {
   font-weight: 600;
   letter-spacing: 0.05em;
-  color: #ffffff;
+  color: var(--color-text-primary);
+}
+
+/* Theme Toggle Button Style */
+.theme-toggle-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--color-border-strong);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  transform: scale(1.05);
+}
+
+.theme-toggle-btn i {
+  font-size: 1.15rem;
 }
 
 /* User Profile & Actions */
@@ -142,7 +110,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 1px solid var(--color-border);
   padding-left: 1.25rem;
 }
 
@@ -155,7 +123,7 @@
 .user-name {
   font-size: 0.9rem;
   font-weight: 500;
-  color: #e5e5e5;
+  color: var(--color-text-primary);
 }
 
 .user-avatar {
@@ -163,11 +131,11 @@
   height: 36px;
   border-radius: 50%;
   overflow: hidden;
-  border: 1.5px solid rgba(62, 207, 142, 0.5);
+  border: 1.5px solid var(--color-primary);
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.03);
+  background: var(--color-card);
 }
 
 .user-avatar img {
@@ -178,7 +146,7 @@
 
 .avatar-placeholder {
   font-weight: 700;
-  color: #3ecf8e;
+  color: var(--color-primary);
   font-size: 0.95rem;
 }
 
@@ -189,7 +157,7 @@
   border-radius: 8px;
   border: 1px solid transparent;
   background: transparent;
-  color: #a3a3a3;
+  color: var(--color-text-secondary);
   display: flex;
   align-items: center;
   justify-content: center;

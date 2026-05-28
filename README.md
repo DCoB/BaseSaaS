@@ -43,6 +43,8 @@
   <img src="https://img.shields.io/badge/Supabase-Auth%20%26%20Database-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="Supabase" />
   <img src="https://img.shields.io/badge/Vitest-Test%20Runner-6E9F18?style=for-the-badge&logo=vitest&logoColor=white" alt="Vitest" />
   <img src="https://img.shields.io/badge/i18n-Transloco-blueviolet?style=for-the-badge&logo=internet-explorer&logoColor=white" alt="i18n Transloco" />
+  <img src="https://img.shields.io/badge/Theme-Light%20%2F%20Dark-ff69b4?style=for-the-badge" alt="Theme Light/Dark" />
+  <img src="https://img.shields.io/badge/GitHub-Template%20Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Template" />
   <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="MIT License" />
 </p>
 
@@ -62,6 +64,7 @@ Are you tired of spending **entire days** configuring database connections, comp
 | :--- | :--- | :--- |
 | **🔐 Supreme Authentication** | Full secure authentication flow (Sign Up, Sign In, Password Reset, Guards, and route protection). | Supabase Auth |
 | **🌍 Global Convenience (i18n)** | Dynamic translations matching the user's active language. No hardcoded text strings! | @jsverse/transloco |
+| **🌓 Light/Dark Theme** | Reactive theme toggler managed by Signals & Effects. Instant transition, zero flickering, persisted in localStorage. | CSS Variables + Signals |
 | **🛡️ Intelligent Interception** | Supabase network errors are translated at runtime and displayed premiumly in the UI. | Interceptor + Transloco |
 | **⚡ Extreme Performance** | Dynamic page loading, instant navigation, and native SSR. | Lazy Loading & Angular SSR |
 | **🧪 Shielded Testing** | Ultra-fast unit testing infrastructure running in milliseconds. | Vitest |
@@ -93,7 +96,9 @@ _Need help connecting the services to run the app? Access:_
 
 ## ⚡ Quick Start (3 Steps)
 
-### 1. Clone and Install
+### 1. Create from Template & Install
+
+You can quickly boot up your project by clicking the green **[Use this template](https://github.com/DCoB/BaseSaaS/generate)** button at the top of this repository page to create a clean repository in your GitHub account. Or, clone it manually:
 
 ```bash
 git clone https://github.com/your-username/base-saas.git
