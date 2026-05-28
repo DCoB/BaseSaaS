@@ -9,6 +9,7 @@ import { TranslocoModule, TranslocoService } from '@jsverse/transloco';
 
 // Application Services
 import { AuthService } from '../../../core/services/auth/auth.service';
+import { ThemeService } from '../../../core/services/theme/theme.service';
 
 interface LanguageOption {
   code: string;
@@ -31,6 +32,10 @@ interface LanguageOption {
 export class TopbarComponent {
   private readonly translocoService = inject(TranslocoService);
   private readonly authService = inject(AuthService);
+  private readonly themeService = inject(ThemeService);
+
+  // Expor tema atual para o template
+  protected readonly currentTheme = this.themeService.theme;
 
   // Expor usuário atual para exibição do avatar/perfil
   protected readonly user = this.authService.currentUser;
@@ -58,6 +63,13 @@ export class TopbarComponent {
         localStorage.setItem('lang', event.value.code);
       }
     }
+  }
+
+  /**
+   * Alterna entre o tema claro e escuro no aplicativo
+   */
+  protected toggleTheme(): void {
+    this.themeService.toggleTheme();
   }
 
   /**

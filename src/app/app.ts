@@ -8,6 +8,7 @@ import { TranslocoModule } from '@jsverse/transloco';
 
 // Application Services
 import { NavigationService } from './core/services/navigation.service';
+import { ThemeService } from './core/services/theme/theme.service';
 
 // Shared Components
 import { TopbarComponent } from './shared/components/topbar/topbar.component';
@@ -24,6 +25,7 @@ import { environment } from '@supabase/environment';
 })
 export class App {
   private readonly navigationService = inject(NavigationService);
+  private readonly themeService = inject(ThemeService);
   
   constructor() {
     // Remove a classe de loading do idioma no client-side após o bootstrap do Angular

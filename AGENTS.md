@@ -66,6 +66,10 @@ You are an expert in TypeScript, Angular, and scalable web application developme
   - Only execute the full test suite and build when finalizing the implementation of a feature, before delivering the final task summary, or when explicitly requested by the user.
   - For minor changes, prioritize visual verification or reasoning, or run targeted tests instead of the entire suite.
 
+## Styling & Theme Rules
+
+- **NO Color Transitions for Themes**: NEVER add CSS color transitions (`transition: background-color ...`, `transition: color ...`, etc.) when changing themes. Themes must toggle instantly without delays or desynchronization between different elements.
+
 ## Git & GitHub Versioning Rules
 
 - **NO Proactive Commits or PRs**: You are strictly **forbidden** from running git commits (`git commit`), pushes (`git push`), or Pull Request automation commands (such as `pr-creator.js`) on your own initiative.

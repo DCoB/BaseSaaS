@@ -3,8 +3,8 @@
 :host {
   display: block;
   min-height: 100vh;
-  background-color: #000;
-  color: #fff;
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
   font-family: system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
 }

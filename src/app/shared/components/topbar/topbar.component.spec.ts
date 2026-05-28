@@ -2,7 +2,7 @@ import { signal, Injectable } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { provideTransloco, TranslocoService, TranslocoLoader, Translation } from '@jsverse/transloco';
 import { of, Observable } from 'rxjs';
-import { vi } from 'vitest';
+import { vi, describe, it, expect, beforeEach } from 'vitest';
 import { AuthService } from '../../../core/services/auth/auth.service';
 import { TopbarComponent } from './topbar.component';
 
@@ -50,5 +50,14 @@ describe('TopbarComponent', () => {
     const fixture = TestBed.createComponent(TopbarComponent);
     const component = fixture.componentInstance;
     expect(component).toBeTruthy();
+  });
+
+  it('should toggle theme when toggleTheme is called', () => {
+    const fixture = TestBed.createComponent(TopbarComponent);
+    const component = fixture.componentInstance;
+    const initialTheme = component['currentTheme']();
+    component['toggleTheme']();
+    const newTheme = component['currentTheme']();
+    expect(newTheme).not.toBe(initialTheme);
   });
 });

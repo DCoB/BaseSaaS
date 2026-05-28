@@ -24,6 +24,45 @@ Elas estão declaradas no arquivo central de estilos:
 
 ---
 
+## 🌓 Sistema de Seleção de Temas (Claro / Escuro)
+
+O **BaseSaas** vem equipado de fábrica com um alternador dinâmico de temas reativo de ponta, 100% integrado no nível global da plataforma e totalmente compatível com SSR (Server-Side Rendering).
+
+### 1. Arquitetura do `ThemeService`
+O serviço singleton **[ThemeService](file:///d:/Projetos/BaseSaas/src/app/core/services/theme/theme.service.ts)** centraliza todo o gerenciamento de estado do tema claro/escuro usando **Angular Signals** e **Effects**:
+* **Armazenamento Seguro**: Lê e escreve a escolha do tema no `localStorage` sob a chave `'base-theme'`.
+* **Inicialização Padrão**: O tema padrão é o **Dark** (Midnight/Obsidian), mantendo a estética sofisticada do boilerplate.
+* **Escudo SSR**: Todas as verificações de `localStorage` ou acesso a elementos do `document` são feitas com proteção `typeof window !== 'undefined'` para rodar suavemente em builds de pré-renderização.
+* **Sincronização Reativa**: Um `effect()` interno escuta a alteração do Signal `theme` e atualiza automaticamente o atributo `data-theme` na tag de raiz da página (`html`).
+
+### 2. Controle Precoce para Prevenção de Flashing
+Para evitar o inconveniente efeito de relance de luz (flicker de cores brancas) no carregamento inicial da página antes da hidratação do Angular:
+1. O `ThemeService` é injetado diretamente no **[AppComponent](file:///d:/Projetos/BaseSaas/src/app/app.ts)**.
+2. Isso garante que a inicialização do efeito ocorra o mais cedo possível no ciclo de vida da aplicação, injetando o atributo `data-theme` correspondente no `document.documentElement` antes de renderizar qualquer conteúdo visual.
+
+### 3. Associação de Estilos
+Toda a alternância visual ocorre de forma performática e nativa através do seletor CSS no arquivo global **[src/styles.css](file:///d:/Projetos/BaseSaas/src/styles.css)**:
+```css
+:root {
+  /* Variáveis e Cores para o Tema Dark (Padrão) */
+  --color-background: #000000;
+  --color-surface: #09090b;
+  --color-card: #18181b;
+  /* ... */
+}
+
+html[data-theme='light'] {
+  /* Variáveis e Cores para o Tema Light */
+  --color-background: #f8fafc;
+  --color-surface: #f1f5f9;
+  --color-card: #ffffff;
+  /* ... */
+}
+```
+Todos os componentes consumem estas variáveis instantaneamente sem quaisquer efeitos de transição CSS de cores para assegurar uma troca de tema imediata, limpa e sem atrasos ou dessincronizações de elementos na interface!
+
+---
+
 ## 🧩 Integração Limpa com PrimeNG
 
 O PrimeNG é utilizado para nos fornecer componentes funcionais complexos e de altíssima acessibilidade (como overlays, caixas de diálogo e notificações do tipo Toasters).
@@ -48,6 +87,36 @@ E renderizamos o elemento de forma simples no template `app.html`:
 ```html
 <p-toast position="bottom-center"></p-toast>
 ```
+
+### 2. Personalização Centralizada (`primeng-overrides.css`)
+
+Todas as customizações visuais de componentes PrimeNG estão **obrigatoriamente** centralizadas em um único arquivo dedicado:
+**[src/styles/primeng-overrides.css](file:///d:/Projetos/BaseSaas/src/styles/primeng-overrides.css)**
+
+Este arquivo é importado no início do **[styles.css](file:///d:/Projetos/BaseSaas/src/styles.css)** global:
+```css
+@import "styles/primeng-overrides.css";
+```
+
+#### 📐 Estrutura Interna do Arquivo
+
+O arquivo é organizado em seções numeradas e comentadas:
+
+| Seção | Responsabilidade |
+|-------|-----------------|
+| **1. Desativação de Transições** | Kill-switch global que remove **todas** as transições e animações de cor dos componentes PrimeNG (`.p-component`, `.p-select`, etc.) via `transition: none !important`. |
+| **2. Customização do `p-select`** | Estilos premium para o seletor de idiomas (`.lang-select.p-select`): cores, bordas, padding e efeitos de hover integrados ao sistema de variáveis CSS. |
+| **3. Overlay / Painel Suspenso** | Estilização do dropdown overlay (`.p-select-overlay`, `.p-select-option`): fundo, sombras, arredondamento e destaque ao passar o mouse. |
+
+#### ⚠️ Regra de Ouro para Desenvolvedores
+
+> **NUNCA** adicione overrides de estilo do PrimeNG diretamente em arquivos `.css` de componentes individuais.
+> Toda e qualquer personalização de componentes PrimeNG deve ser feita **exclusivamente** neste arquivo centralizado.
+
+Isso garante:
+- **Rastreabilidade**: Um único local para auditar todas as modificações feitas sobre a biblioteca.
+- **Consistência de Tema**: Todos os overrides consomem as variáveis CSS globais (`--color-*`), garantindo compatibilidade automática com os temas claro e escuro.
+- **Zero Transições de Cor**: A Seção 1 do arquivo garante que nenhum componente PrimeNG exiba transições de cor, mantendo a troca de tema instantânea e sem atrasos.
 
 ---
 
