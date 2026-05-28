@@ -16,6 +16,7 @@ You are an expert in TypeScript, Angular, and scalable web application developme
 - Do NOT use the `@HostBinding` and `@HostListener` decorators. Put host bindings inside the `host` object of the `@Component` or `@Directive` decorator instead
 - Use `NgOptimizedImage` for all static images.
   - `NgOptimizedImage` does not work for inline base64 images.
+- **Iconography Standard (PrimeIcons)**: Always prioritize using icons from the official PrimeIcons library (`pi pi-[icon-name]`) instead of declaring inline or external SVGs for icons. This ensures absolute styling consistency, fast rendering, and simple maintenance across templates.
 
 ## Accessibility Requirements
 

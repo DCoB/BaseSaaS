@@ -6,6 +6,18 @@
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" type="image/jpeg" href="logo.jpg" />
+    
+    <!-- Script inline para evitar flickering de idioma durante a hidratação (SSR) -->
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('lang');
+          if (saved && saved !== 'en') {
+            document.documentElement.classList.add('lang-loading');
+          }
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body>
     <app-root></app-root>

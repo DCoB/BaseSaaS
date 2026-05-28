@@ -62,6 +62,12 @@
       "BACK_TO_LOGIN": "Go to Sign In"
     }
   },
+  "TOPBAR": {
+    "CHOOSE_LANGUAGE": "Language",
+    "PORTUGUESE": "Portuguese",
+    "ENGLISH": "English",
+    "SPANISH": "Spanish"
+  },
   "DASHBOARD": {
     "TITLE": "Main Dashboard",
     "LOGOUT": "Sign Out",

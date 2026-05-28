@@ -6,10 +6,12 @@
   background-color: #000;
   color: #fff;
   font-family: system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
 }
 
 .app-viewport {
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 /* Loading Screen Premium */

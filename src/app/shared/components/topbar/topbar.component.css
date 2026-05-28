@@ -1,0 +1,237 @@
+/* Topbar Premium Layout & Theme */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 1.5rem;
+  background: rgba(10, 10, 10, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+/* Brand styling */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-logo {
+  height: 32px;
+  width: 32px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+.brand-name {
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  background: linear-gradient(135deg, #ffffff 0%, #a3a3a3 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Right Section Actions */
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+/* Language Selector styles */
+.lang-selector-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Custom styling for PrimeNG Select element to fit the dark theme */
+:host ::ng-deep .lang-select.p-select {
+  background: rgba(255, 255, 255, 0.03) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+  min-height: 44px !important;
+  width: 90px !important;
+  max-width: 90px !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  padding: 0 0.5rem !important;
+  transition: all 0.2s ease !important;
+}
+
+:host ::ng-deep .lang-select.p-select:hover {
+  background: rgba(255, 255, 255, 0.06) !important;
+  border-color: rgba(62, 207, 142, 0.4) !important;
+  box-shadow: 0 0 0 3px rgba(62, 207, 142, 0.15) !important;
+}
+
+:host ::ng-deep .lang-select.p-select .p-select-label {
+  padding: 0 0.25rem !important;
+  color: #fff !important;
+  font-size: 0.9rem !important;
+  font-weight: 500 !important;
+}
+
+:host ::ng-deep .lang-select.p-select .p-select-dropdown {
+  color: #a3a3a3 !important;
+}
+
+/* Dropdown Overlay / panel customizing */
+:host ::ng-deep .p-select-overlay {
+  background: #0f0f0f !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.8) !important;
+  margin-top: 4px !important;
+  position: absolute !important;
+  right: 0 !important;
+  left: auto !important;
+  min-width: 150px !important;
+}
+
+:host ::ng-deep .p-select-option {
+  padding: 0.75rem 1rem !important;
+  color: #d4d4d4 !important;
+  transition: all 0.15s ease !important;
+  font-size: 0.9rem !important;
+}
+
+:host ::ng-deep .p-select-option:hover,
+:host ::ng-deep .p-select-option.p-highlight {
+  background: rgba(62, 207, 142, 0.1) !important;
+  color: #3ecf8e !important;
+}
+
+.lang-option-selected {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lang-globe-icon {
+  font-size: 1rem;
+  color: #3ecf8e; /* Destaque verde esmeralda premium */
+}
+
+.lang-option-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lang-flag {
+  font-size: 1.1rem;
+}
+
+.lang-name-short {
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #ffffff;
+}
+
+/* User Profile & Actions */
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  padding-left: 1.25rem;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.user-name {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #e5e5e5;
+}
+
+.user-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1.5px solid rgba(62, 207, 142, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.user-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-placeholder {
+  font-weight: 700;
+  color: #3ecf8e;
+  font-size: 0.95rem;
+}
+
+/* Logout Button */
+.logout-button {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: #a3a3a3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.logout-button:hover {
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.15);
+}
+
+.logout-button i {
+  font-size: 1.15rem;
+}
+
+/* Responsive layout adjustments (Mobile-First) */
+@media (max-width: 768px) {
+  .topbar {
+    padding: 0 1rem;
+  }
+  
+  .brand-name {
+    display: none; /* Hide brand name to save space */
+  }
+
+  .user-details {
+    display: none; /* Hide user name and show only avatar */
+  }
+  
+  .user-profile {
+    padding-left: 0.75rem;
+    gap: 0.5rem;
+  }
+
+  :host ::ng-deep .lang-select.p-select {
+    width: 75px !important;
+    max-width: 75px !important;
+  }
+
+  .lang-name-short {
+    font-size: 0.8rem;
+  }
+}
