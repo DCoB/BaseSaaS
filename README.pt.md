@@ -71,6 +71,16 @@ O **BaseSaas** é a solução definitiva de nível comercial. Ele foi meticulosa
 
 ---
 
+## 🚀 Roadmap de Desenvolvimento do Produto
+
+Aqui está o nosso roadmap de desenvolvimento de produto, descrevendo os recursos principais já concluídos e integrados neste boilerplate, bem como os marcos planejados para lançamentos futuros:
+
+<p align="center">
+  <img src="docs/rocket_roadmap.png" alt="BaseSaaS Rocket Roadmap" width="85%" style="border-radius: 1rem; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 40px -10px rgba(62, 207, 142, 0.3);" />
+</p>
+
+---
+
 ## 📚 Central de Documentação Técnica & Guias
 
 Para manter este repositório leve e focado no seu negócio, toda a documentação avançada e técnica de arquitetura e processos está estruturada de forma limpa na pasta `/docs`:
