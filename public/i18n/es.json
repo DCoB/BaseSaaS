@@ -63,14 +63,12 @@
     }
   },
   "TOPBAR": {
-    "CHOOSE_LANGUAGE": "Idioma",
     "PORTUGUESE": "Portugués",
     "ENGLISH": "Inglés",
     "SPANISH": "Español",
     "TOGGLE_THEME": "Alternar Tema"
   },
   "DASHBOARD": {
-    "TITLE": "Panel Principal",
     "LOGOUT": "Cerrar Sesión",
     "GUEST": "Invitado",
     "PLAN_FREE": "Plan Gratuito",

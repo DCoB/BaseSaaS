@@ -63,14 +63,12 @@
     }
   },
   "TOPBAR": {
-    "CHOOSE_LANGUAGE": "Language",
     "PORTUGUESE": "Portuguese",
     "ENGLISH": "English",
     "SPANISH": "Spanish",
     "TOGGLE_THEME": "Toggle Theme"
   },
   "DASHBOARD": {
-    "TITLE": "Main Dashboard",
     "LOGOUT": "Sign Out",
     "GUEST": "Guest",
     "PLAN_FREE": "Free Plan",
